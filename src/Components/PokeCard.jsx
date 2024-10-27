@@ -1,12 +1,12 @@
 import { useState,useEffect} from "react"
 
 export const PokeCard=({pokemon,infoPokemon})=>{
-    const [pokeDetails,setPokeDatils]=useState()
+    const [pokeDetails,setPokeDetails]=useState()
 
     const fetchPokemonDetails=async()=>{
         const resp=await fetch(pokemon.url)
         const data=await resp.json()
-        setPokeDatils(data)
+        setPokeDetails(data)
         console.log("data Pokemon",data)
     }
 
